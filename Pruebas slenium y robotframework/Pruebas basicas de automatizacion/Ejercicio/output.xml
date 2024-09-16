@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.11 on win32)" generated="20230429 07:37:38.845" rpa="false" schemaversion="3">
+<suite id="s1" name="EjercicioPractico" source="C:\Users\seang\Desktop\Universidad\Septimo semestre\Pruebas\Ejercicio\EjercicioPractico.robot">
+<test id="s1-t1" name="G001 Ejercicio" line="10">
+<kw name="Seleccionar navegador" library="recursos">
+<kw name="Get Selection From User" library="Dialogs">
+<var>${Browser}</var>
+<arg>Seleccionar navegador</arg>
+<arg>chrome</arg>
+<arg>edge</arg>
+<doc>Pauses execution and asks user to select a value.</doc>
+<msg timestamp="20230429 07:37:56.260" level="INFO">${Browser} = edge</msg>
+<status status="PASS" starttime="20230429 07:37:43.415" endtime="20230429 07:37:56.262"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Browser}</arg>
+<arg>${Browser}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230429 07:37:56.263" level="INFO">${Browser} = edge</msg>
+<status status="PASS" starttime="20230429 07:37:56.262" endtime="20230429 07:37:56.263"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Browser}'=='chrome'</arg>
+<arg>Opcion Chrome</arg>
+<arg>ELSE IF</arg>
+<arg>'${Browser}'=='edge'</arg>
+<arg>Opcion Edge</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Opcion Edge" library="recursos">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230429 07:37:56.268" level="INFO">Opening browser 'edge' to base url 'https://www.tiendasjumbo.co/'.</msg>
+<status status="PASS" starttime="20230429 07:37:56.267" endtime="20230429 07:38:01.286"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230429 07:38:01.286" endtime="20230429 07:38:01.424"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[1]/div/div/div/a/img</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230429 07:38:01.426" endtime="20230429 07:38:01.954"/>
+</kw>
+<status status="PASS" starttime="20230429 07:37:56.264" endtime="20230429 07:38:01.955"/>
+</kw>
+<status status="PASS" starttime="20230429 07:37:56.263" endtime="20230429 07:38:01.955"/>
+</kw>
+<status status="PASS" starttime="20230429 07:37:43.415" endtime="20230429 07:38:01.956"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230429 07:38:01.957" endtime="20230429 07:38:01.964"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230429 07:38:03.975" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230429 07:38:01.965" endtime="20230429 07:38:03.975"/>
+</kw>
+<kw name="Captura de pantalla" library="recursos">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<arg>CapturaDePantalla.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230429 07:38:04.329" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CapturaDePantalla.png"&gt;&lt;img src="CapturaDePantalla.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230429 07:38:03.975" endtime="20230429 07:38:04.329"/>
+</kw>
+<status status="PASS" starttime="20230429 07:38:03.975" endtime="20230429 07:38:04.330"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230429 07:38:05.334" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230429 07:38:04.330" endtime="20230429 07:38:05.335"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>Xpath://*[@id="menu-item-my-account-options"]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 07:38:05.337" level="INFO">Clicking element 'Xpath://*[@id="menu-item-my-account-options"]/div'.</msg>
+<status status="PASS" starttime="20230429 07:38:05.336" endtime="20230429 07:38:05.475"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>Xpath=/html/body/div[2]/div/div[1]/div/div[3]/div/div/div/div[2]/div/div/form/div[1]/label/div/input</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230429 07:38:05.476" endtime="20230429 07:38:10.009"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230429 07:38:12.014" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230429 07:38:10.010" endtime="20230429 07:38:12.014"/>
+</kw>
+<kw name="Verificar usuario" library="recursos">
+<kw name="Click Element" library="Selenium2Library">
+<arg>Xpath=//*[@id="btnNoIdWpnPush"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 07:38:12.017" level="INFO">Clicking element 'Xpath=//*[@id="btnNoIdWpnPush"]'.</msg>
+<status status="PASS" starttime="20230429 07:38:12.015" endtime="20230429 07:38:12.088"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>Xpath=/html/body/div[2]/div/div[1]/div/div[3]/div/div/div/div[2]/div/div/form/div[1]/label/div/input</arg>
+<arg>sergio3@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230429 07:38:12.089" level="INFO">Typing text 'sergio3@gmail.com' into text field 'Xpath=/html/body/div[2]/div/div[1]/div/div[3]/div/div/div/div[2]/div/div/form/div[1]/label/div/input'.</msg>
+<status status="PASS" starttime="20230429 07:38:12.088" endtime="20230429 07:38:12.280"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>Xpath=/html/body/div[2]/div/div[1]/div/div[3]/div/div/div/div[2]/div/div/form/div[2]/div/label/div/input</arg>
+<arg>Password1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230429 07:38:12.282" level="INFO">Typing text 'Password1234' into text field 'Xpath=/html/body/div[2]/div/div[1]/div/div[3]/div/div/div/div[2]/div/div/form/div[2]/div/label/div/input'.</msg>
+<status status="PASS" starttime="20230429 07:38:12.280" endtime="20230429 07:38:12.463"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>Xpath=/html/body/div[2]/div/div[1]/div/div[3]/div/div/div/div[2]/div/div/form/div[4]/div/button/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 07:38:12.464" level="INFO">Clicking element 'Xpath=/html/body/div[2]/div/div[1]/div/div[3]/div/div/div/div[2]/div/div/form/div[4]/div/button/div'.</msg>
+<status status="PASS" starttime="20230429 07:38:12.463" endtime="20230429 07:38:12.542"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230429 07:38:14.554" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230429 07:38:12.542" endtime="20230429 07:38:14.555"/>
+</kw>
+<status status="PASS" starttime="20230429 07:38:12.014" endtime="20230429 07:38:14.555"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>Xpath=/html/body/div[2]/div/div[1]/div/div[3]/div/div/div/div[2]/div/div/form/div[3]</arg>
+<arg>Usuario y/o contraseña equivocada</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230429 07:38:14.557" level="INFO">Verifying element 'Xpath=/html/body/div[2]/div/div[1]/div/div[3]/div/div/div/div[2]/div/div/form/div[3]' contains exact text 'Usuario y/o contraseña equivocada'.</msg>
+<status status="PASS" starttime="20230429 07:38:14.556" endtime="20230429 07:38:14.593"/>
+</kw>
+<kw name="Pagina principal" library="recursos">
+<kw name="Click Element" library="Selenium2Library">
+<arg>Xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[1]/div/div/div/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 07:38:14.599" level="INFO">Clicking element 'Xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[1]/div/div/div/a/img'.</msg>
+<status status="PASS" starttime="20230429 07:38:14.598" endtime="20230429 07:38:14.836"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230429 07:38:17.846" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230429 07:38:14.838" endtime="20230429 07:38:17.846"/>
+</kw>
+<status status="PASS" starttime="20230429 07:38:14.596" endtime="20230429 07:38:17.847"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230429 07:38:19.853" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230429 07:38:17.847" endtime="20230429 07:38:19.853"/>
+</kw>
+<kw name="Busqueda" library="recursos">
+<kw name="Input Text" library="Selenium2Library">
+<arg>Xpath=//*[@id="downshift-1-input"]</arg>
+<arg>Televisores</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230429 07:38:19.855" level="INFO">Typing text 'Televisores' into text field 'Xpath=//*[@id="downshift-1-input"]'.</msg>
+<status status="PASS" starttime="20230429 07:38:19.854" endtime="20230429 07:38:20.046"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>Xpath=//*[@id="downshift-1-input"]</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230429 07:38:20.052" level="INFO">Sending key(s) ('ENTER',) to Xpath=//*[@id="downshift-1-input"] element.</msg>
+<msg timestamp="20230429 07:38:20.375" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20230429 07:38:20.375" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230429 07:38:20.050" endtime="20230429 07:38:20.440"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>Xpath=/html/body/div[2]/div/div[1]/div/div[3]/div/div/section/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div/div[3]/div/div/div[1]/div/div[2]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230429 07:38:20.440" endtime="20230429 07:38:23.602"/>
+</kw>
+<status status="PASS" starttime="20230429 07:38:19.854" endtime="20230429 07:38:23.602"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230429 07:38:26.605" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230429 07:38:23.602" endtime="20230429 07:38:26.605"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>@{Precios}</arg>
+<arg>//*[@id="gallery-layout-container"]/div[1]/section/a/article/div/div[1]/div/div[1]/div/div/img</arg>
+<arg>//*[@id="gallery-layout-container"]/div[2]/section/a/article/div/div[1]/div/div[1]/div/div/img</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230429 07:38:26.607" level="INFO">@{Precios} = [ //*[@id="gallery-layout-container"]/div[1]/section/a/article/div/div[1]/div/div[1]/div/div/img | //*[@id="gallery-layout-container"]/div[2]/section/a/article/div/div[1]/div/div[1]/div/div/img ]</msg>
+<status status="PASS" starttime="20230429 07:38:26.605" endtime="20230429 07:38:26.607"/>
+</kw>
+<for flavor="IN">
+<var>${Precios}</var>
+<value>@{Precios}</value>
+<iter>
+<var name="${Precios}">//*[@id="gallery-layout-container"]/div[1]/section/a/article/div/div[1]/div/div[1]/div/div/img</var>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=${Precios}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 07:38:26.607" level="INFO">Clicking element 'xpath=//*[@id="gallery-layout-container"]/div[1]/section/a/article/div/div[1]/div/div[1]/div/div/img'.</msg>
+<status status="PASS" starttime="20230429 07:38:26.607" endtime="20230429 07:38:26.807"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230429 07:38:28.821" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230429 07:38:26.807" endtime="20230429 07:38:28.821"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=/html/body/div[2]/div/div[1]/div/div/div/div[3]/div/div[1]/div/section/div/div/div/div[1]/div/div/div/div/span[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 07:38:28.822" level="INFO">Clicking element 'xpath=/html/body/div[2]/div/div[1]/div/div/div/div[3]/div/div[1]/div/section/div/div/div/div[1]/div/div/div/div/span[3]/a'.</msg>
+<status status="PASS" starttime="20230429 07:38:28.822" endtime="20230429 07:38:28.962"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230429 07:38:30.972" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230429 07:38:28.962" endtime="20230429 07:38:30.972"/>
+</kw>
+<status status="PASS" starttime="20230429 07:38:26.607" endtime="20230429 07:38:30.972"/>
+</iter>
+<iter>
+<var name="${Precios}">//*[@id="gallery-layout-container"]/div[2]/section/a/article/div/div[1]/div/div[1]/div/div/img</var>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=${Precios}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 07:38:30.973" level="INFO">Clicking element 'xpath=//*[@id="gallery-layout-container"]/div[2]/section/a/article/div/div[1]/div/div[1]/div/div/img'.</msg>
+<status status="PASS" starttime="20230429 07:38:30.973" endtime="20230429 07:38:31.328"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230429 07:38:33.334" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230429 07:38:31.329" endtime="20230429 07:38:33.334"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=/html/body/div[2]/div/div[1]/div/div/div/div[3]/div/div[1]/div/section/div/div/div/div[1]/div/div/div/div/span[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 07:38:33.336" level="INFO">Clicking element 'xpath=/html/body/div[2]/div/div[1]/div/div/div/div[3]/div/div[1]/div/section/div/div/div/div[1]/div/div/div/div/span[3]/a'.</msg>
+<status status="PASS" starttime="20230429 07:38:33.336" endtime="20230429 07:38:33.487"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230429 07:38:35.489" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230429 07:38:33.488" endtime="20230429 07:38:35.489"/>
+</kw>
+<status status="PASS" starttime="20230429 07:38:30.972" endtime="20230429 07:38:35.490"/>
+</iter>
+<status status="PASS" starttime="20230429 07:38:26.607" endtime="20230429 07:38:35.490"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230429 07:38:38.500" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230429 07:38:35.490" endtime="20230429 07:38:38.500"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230429 07:38:38.501" endtime="20230429 07:38:40.975"/>
+</kw>
+<kw name="Stop Recording Test" library="AutoRecorder">
+<arg>G001 Ejercicio</arg>
+<doc>There is no need to execute this keyword manually.</doc>
+<msg timestamp="20230429 07:38:41.025" level="INFO" html="true">&lt;a href="recording_1.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="recording_1.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230429 07:38:40.975" endtime="20230429 07:38:41.025"/>
+</kw>
+<status status="PASS" starttime="20230429 07:37:41.295" endtime="20230429 07:38:40.975"/>
+</test>
+<doc>Aplicar grabacion y capturas de pantalla.
+Cubrir 2 navegadores.
+Aplicar conceptos de ciclo, archivo de recursos, variables y condicional.
+Aplicar en un mismo ejercicio lo anteriormente mencionado.</doc>
+<status status="PASS" starttime="20230429 07:37:38.845" endtime="20230429 07:38:41.030"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="EjercicioPractico">EjercicioPractico</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

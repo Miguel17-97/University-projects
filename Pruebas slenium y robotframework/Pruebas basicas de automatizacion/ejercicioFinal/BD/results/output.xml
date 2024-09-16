@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.11 on win32)" generated="20230504 21:42:07.864" rpa="false" schemaversion="3">
+<suite id="s1" name="BD" source="C:\Users\seang\Desktop\Universidad\Septimo semestre\Pruebas\ejercicioFinal\BD">
+<suite id="s1-s1" name="Bd" source="C:\Users\seang\Desktop\Universidad\Septimo semestre\Pruebas\ejercicioFinal\BD\bd.robot">
+<test id="s1-s1-t1" name="Conectar a base de datos MySQL" line="19">
+<kw name="Connect To Database" library="DatabaseLibrary">
+<arg>pymysql</arg>
+<arg>${DBName}</arg>
+<arg>${DBUser}</arg>
+<arg>${DBPass}</arg>
+<arg>${DBHost}</arg>
+<arg>${DBPort}</arg>
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<msg timestamp="20230504 21:42:07.985" level="INFO">Connecting using : pymysql.connect(db=robot_prueba, user=robot_prueba, passwd=123456abc, host=127.0.0.1, port=3306, charset=None) </msg>
+<status status="PASS" starttime="20230504 21:42:07.953" endtime="20230504 21:42:07.990"/>
+</kw>
+<status status="PASS" starttime="20230504 21:42:07.952" endtime="20230504 21:42:07.991"/>
+</test>
+<test id="s1-s1-t2" name="Crear una tabla" line="22">
+<kw name="Execute Sql String" library="DatabaseLibrary">
+<arg>CREATE TABLE productos(id integer, nombre varchar(20), cantidad integer(100));</arg>
+<doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
+True to run command without an explicit transaction commit or rollback.</doc>
+<msg timestamp="20230504 21:42:07.994" level="INFO">Executing : Execute SQL String  |  CREATE TABLE productos(id integer, nombre varchar(20), cantidad integer(100)); </msg>
+<status status="PASS" starttime="20230504 21:42:07.994" endtime="20230504 21:42:08.021"/>
+</kw>
+<status status="PASS" starttime="20230504 21:42:07.992" endtime="20230504 21:42:08.021"/>
+</test>
+<kw name="Disconnect From Database" library="DatabaseLibrary" type="TEARDOWN">
+<doc>Disconnects from the database.</doc>
+<msg timestamp="20230504 21:42:08.024" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20230504 21:42:08.024" endtime="20230504 21:42:08.026"/>
+</kw>
+<status status="PASS" starttime="20230504 21:42:07.904" endtime="20230504 21:42:08.026"/>
+</suite>
+<status status="PASS" starttime="20230504 21:42:07.870" endtime="20230504 21:42:08.029"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="BD">BD</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Bd">BD.Bd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

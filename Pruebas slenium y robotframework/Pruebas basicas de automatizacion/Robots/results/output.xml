@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.11 on win32)" generated="20230427 20:05:30.882" rpa="false" schemaversion="3">
+<suite id="s1" name="Robots" source="C:\Users\seang\Desktop\Universidad\Septimo semestre\Pruebas\Robots">
+<suite id="s1-s1" name="Prueba1" source="C:\Users\seang\Desktop\Universidad\Septimo semestre\Pruebas\Robots\Prueba1.robot">
+<test id="s1-s1-t1" name="G001 Búsqueda de palabras en google" line="8">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230427 20:05:31.179" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20230427 20:05:31.178" endtime="20230427 20:05:36.004"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=/html/body/div[1]/div[2]/div/a/picture/img</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230427 20:05:36.041" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.138)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E6DCE3]
+	(No symbol) [0x00E039D1]
+	(No symbol) [0x00D14DA8]
+	(No symbol) [0x00CFD0D3]
+	(No symbol) [0x00D5EA8B]
+	(No symbol) [0x00D6D093]
+	(No symbol) [0x00D5ACC6]
+	(No symbol) [0x00D36F68]
+	(No symbol) [0x00D380CD]
+	GetHandleVerifier [0x010E3832+2506274]
+	GetHandleVerifier [0x01119794+2727300]
+	GetHandleVerifier [0x0111E36C+2746716]
+	GetHandleVerifier [0x00F16690+617600]
+	(No symbol) [0x00E0C712]
+	(No symbol) [0x00E11FF8]
+	(No symbol) [0x00E120DB]
+	(No symbol) [0x00E1C63B]
+	BaseThreadInitThunk [0x76187D49+25]
+	RtlInitializeExceptionChain [0x77DEB74B+107]
+	RtlClearBits [0x77DEB6CF+191]
+</msg>
+<msg timestamp="20230427 20:05:36.066" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.138)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E6DCE3]
+	(No symbol) [0x00E039D1]
+	(No symbol) [0x00D14DA8]
+	(No symbol) [0x00CFD0D3]
+	(No symbol) [0x00D5EA8B]
+	(No symbol) [0x00D6D093]
+	(No symbol) [0x00D5ACC6]
+	(No symbol) [0x00D36F68]
+	(No symbol) [0x00D380CD]
+	GetHandleVerifier [0x010E3832+2506274]
+	GetHandleVerifier [0x01119794+2727300]
+	GetHandleVerifier [0x0111E36C+2746716]
+	GetHandleVerifier [0x00F16690+617600]
+	(No symbol) [0x00E0C712]
+	(No symbol) [0x00E11FF8]
+	(No symbol) [0x00E120DB]
+	(No symbol) [0x00E1C63B]
+	BaseThreadInitThunk [0x76187D49+25]
+	RtlInitializeExceptionChain [0x77DEB74B+107]
+	RtlClearBits [0x77DEB6CF+191]
+</msg>
+<status status="FAIL" starttime="20230427 20:05:36.005" endtime="20230427 20:05:36.080"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea</arg>
+<arg>casos de prueba</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230427 20:05:36.082" endtime="20230427 20:05:36.083"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230427 20:05:36.085" endtime="20230427 20:05:36.086"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[2]/div[2]/div[7]/center/input[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230427 20:05:36.087" endtime="20230427 20:05:36.088"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230427 20:05:36.088" endtime="20230427 20:05:36.089"/>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>casos de prueba - Buscar con Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" starttime="20230427 20:05:36.092" endtime="20230427 20:05:36.093"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>casos de prueba</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230427 20:05:36.094" endtime="20230427 20:05:36.094"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230427 20:05:36.095" endtime="20230427 20:05:36.096"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20230427 20:05:36.099" endtime="20230427 20:05:36.100"/>
+</kw>
+<status status="FAIL" starttime="20230427 20:05:31.177" endtime="20230427 20:05:36.142">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.138)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E6DCE3]
+	(No symbol) [0x00E039D1]
+	(No symbol) [0x00D14DA8]
+	(No symbol) [0x00CFD0D3]
+	(No symbol) [0x00D5EA8B]
+	(No symbol) [0x00D6D093]
+	(No symbol) [0x00D5ACC6]
+	(No symbol) [0x00D36F68]
+	(No symbol) [0x00D380CD]
+	GetHandleVerifier [0x010E3832+2506274]
+	GetHandleVerifier [0x01119794+2727300]
+	GetHandleVerifier [0x0111E36C+2746716]
+	GetHandleVerifier [0x00F16690+617600]
+	(No symbol) [0x00E0C712]
+	(No symbol) [0x00E11FF8]
+	(No symbol) [0x00E120DB]
+	(No symbol) [0x00E1C63B]
+	BaseThreadInitThunk [0x76187D49+25]
+	RtlInitializeExceptionChain [0x77DEB74B+107]
+	RtlClearBits [0x77DEB6CF+191]
+</status>
+</test>
+<doc>Existe en un documento de texto los pasos manuales
+Esta es mi primera automatizacion</doc>
+<status status="FAIL" starttime="20230427 20:05:30.922" endtime="20230427 20:05:36.158"/>
+</suite>
+<status status="FAIL" starttime="20230427 20:05:30.889" endtime="20230427 20:05:36.165"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robots">Robots</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Prueba1">Robots.Prueba1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230427 20:05:36.041" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.138)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E6DCE3]
+	(No symbol) [0x00E039D1]
+	(No symbol) [0x00D14DA8]
+	(No symbol) [0x00CFD0D3]
+	(No symbol) [0x00D5EA8B]
+	(No symbol) [0x00D6D093]
+	(No symbol) [0x00D5ACC6]
+	(No symbol) [0x00D36F68]
+	(No symbol) [0x00D380CD]
+	GetHandleVerifier [0x010E3832+2506274]
+	GetHandleVerifier [0x01119794+2727300]
+	GetHandleVerifier [0x0111E36C+2746716]
+	GetHandleVerifier [0x00F16690+617600]
+	(No symbol) [0x00E0C712]
+	(No symbol) [0x00E11FF8]
+	(No symbol) [0x00E120DB]
+	(No symbol) [0x00E1C63B]
+	BaseThreadInitThunk [0x76187D49+25]
+	RtlInitializeExceptionChain [0x77DEB74B+107]
+	RtlClearBits [0x77DEB6CF+191]
+</msg>
+</errors>
+</robot>

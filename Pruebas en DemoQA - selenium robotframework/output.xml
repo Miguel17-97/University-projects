@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.6 on win32)" generated="20240912 13:40:54.195" rpa="false" schemaversion="4">
+<suite id="s1" name="CASO1 SORTABLE" source="c:\Users\Administrador.DESKTOP-QL8M5BG\Documents\Universidad\Draggable\PruebasDemo\Interactions\CASO1_SORTABLE.ROBOT">
+<test id="s1-t1" name="G001 Sortable" line="16">
+<kw name="Set Variable" library="BuiltIn">
+<var>${ruta_carpeta}</var>
+<arg>./Reportes/interactions/Caso1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240912 13:40:54.827" level="INFO">${ruta_carpeta} = ./Reportes/interactions/Caso1</msg>
+<status status="PASS" starttime="20240912 13:40:54.826" endtime="20240912 13:40:54.838"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${creada}</var>
+<arg>Create Directory</arg>
+<arg>${ruta_carpeta}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${ruta_carpeta}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20240912 13:40:54.842" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\Administrador.DESKTOP-QL8M5BG\Documents\Universidad\Draggable\Reportes\interactions\Caso1"&gt;C:\Users\Administrador.DESKTOP-QL8M5BG\Documents\Universidad\Draggable\Reportes\interactions\Caso1&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20240912 13:40:54.840" endtime="20240912 13:40:54.843"/>
+</kw>
+<msg timestamp="20240912 13:40:54.843" level="INFO">${creada} = True</msg>
+<status status="PASS" starttime="20240912 13:40:54.839" endtime="20240912 13:40:54.844"/>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${Navegador}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240912 13:40:54.846" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/login'.</msg>
+<msg timestamp="20240912 13:40:58.882" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\Administrador.DESKTOP-QL8M5BG\Documents\Universidad\chromedriver\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (128.0.6613.137); currently, chromedriver 128.0.6613.137 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20240912 13:41:02.613" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240912 13:41:02.615" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 119
+Current browser version is 128.0.6613.137 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF7475882B2+55298]
+	(No symbol) [0x00007FF7474F5E02]
+	(No symbol) [0x00007FF7473B05AB]
+	(No symbol) [0x00007FF7473E3E72]
+	(No symbol) [0x00007FF7473E32FE]
+	(No symbol) [0x00007FF7473DEC6C]
+	(No symbol) [0x00007FF7473DB30E]
+	(No symbol) [0x00007FF74741A198]
+	(No symbol) [0x00007FF747419CB0]
+	(No symbol) [0x00007FF747411E83]
+	(No symbol) [0x00007FF7473E670A]
+	(No symbol) [0x00007FF7473E7964]
+	GetHandleVerifier [0x00007FF747900AAB+3694587]
+	GetHandleVerifier [0x00007FF74795728E+4048862]
+	GetHandleVerifier [0x00007FF74794F173+4015811]
+	GetHandleVerifier [0x00007FF7476247D6+695590]
+	(No symbol) [0x00007FF747500CE8]
+	(No symbol) [0x00007FF7474FCF34]
+	(No symbol) [0x00007FF7474FD062]
+	(No symbol) [0x00007FF7474ED3A3]
+	BaseThreadInitThunk [0x00007FF8104B5550+16]
+	RtlUserThreadStart [0x00007FF811AA485B+43]
+</msg>
+<status status="FAIL" starttime="20240912 13:40:54.844" endtime="20240912 13:41:02.878"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.880" endtime="20240912 13:41:02.880"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollBy(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.881" endtime="20240912 13:41:02.881"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//div[contains(text(),'Interactions')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.882" endtime="20240912 13:41:02.883"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<arg>${ruta_carpeta}/Caso1</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.884" endtime="20240912 13:41:02.885"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=//div[contains(text(),'Interactions')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.886" endtime="20240912 13:41:02.886"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//span[text() = 'Sortable']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.887" endtime="20240912 13:41:02.887"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=//span[text() = 'Sortable']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.888" endtime="20240912 13:41:02.889"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<arg>${ruta_carpeta}/Caso1</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.889" endtime="20240912 13:41:02.890"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.890" endtime="20240912 13:41:02.891"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollBy(0,150)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.892" endtime="20240912 13:41:02.892"/>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<arg>xpath=(//div[text()='One'])[1]</arg>
+<arg>xpath=(//div[text()='Four'])[1]</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.893" endtime="20240912 13:41:02.893"/>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<arg>xpath=(//div[text()='Two'])[1]</arg>
+<arg>xpath=(//div[text()='Six'])[1]</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.894" endtime="20240912 13:41:02.894"/>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<arg>xpath=(//div[text()='Six'])[1]</arg>
+<arg>xpath=(//div[text()='Five'])[1]</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.894" endtime="20240912 13:41:02.895"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.895" endtime="20240912 13:41:02.896"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<arg>${ruta_carpeta}/Caso1</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.896" endtime="20240912 13:41:02.896"/>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<arg>xpath=(//div[text()='One'])[1]</arg>
+<arg>xpath=(//div[text()='Three'])[1]</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.897" endtime="20240912 13:41:02.897"/>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<arg>xpath=(//div[text()='Two'])[1]</arg>
+<arg>xpath=(//div[text()='Three'])[1]</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.898" endtime="20240912 13:41:02.899"/>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<arg>xpath=(//div[text()='Five'])[1]</arg>
+<arg>xpath=(//div[text()='Six'])[1]</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.900" endtime="20240912 13:41:02.900"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.901" endtime="20240912 13:41:02.901"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<arg>${ruta_carpeta}/Caso1</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.902" endtime="20240912 13:41:02.902"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>id=demo-tab-grid</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.902" endtime="20240912 13:41:02.903"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.903" endtime="20240912 13:41:02.903"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<arg>${ruta_carpeta}/Caso1</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.904" endtime="20240912 13:41:02.904"/>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<arg>xpath=(//div[text()='One'])[2]</arg>
+<arg>xpath=(//div[text()='Four'])[2]</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.905" endtime="20240912 13:41:02.905"/>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<arg>xpath=(//div[text()='Two'])[2]</arg>
+<arg>xpath=(//div[text()='Six'])[2]</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.906" endtime="20240912 13:41:02.906"/>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<arg>xpath=(//div[text()='Six'])[2]</arg>
+<arg>xpath=(//div[text()='Five'])[2]</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.906" endtime="20240912 13:41:02.907"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.907" endtime="20240912 13:41:02.908"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<arg>${ruta_carpeta}/Caso1</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.908" endtime="20240912 13:41:02.909"/>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<arg>xpath=(//div[text()='One'])[2]</arg>
+<arg>xpath=(//div[text()='Three'])[2]</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.909" endtime="20240912 13:41:02.909"/>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<arg>xpath=(//div[text()='Two'])[2]</arg>
+<arg>xpath=(//div[text()='Three'])[2]</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.910" endtime="20240912 13:41:02.910"/>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<arg>xpath=(//div[text()='Five'])[2]</arg>
+<arg>xpath=(//div[text()='Six'])[2]</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.911" endtime="20240912 13:41:02.911"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.912" endtime="20240912 13:41:02.912"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<arg>${ruta_carpeta}/Caso1</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.913" endtime="20240912 13:41:02.913"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20240912 13:41:02.914" endtime="20240912 13:41:02.914"/>
+</kw>
+<status status="FAIL" starttime="20240912 13:40:54.825" endtime="20240912 13:41:02.915">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 119
+Current browser version is 128.0.6613.137 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF7475882B2+55298]
+	(No symbol) [0x00007FF7474F5E02]
+	(No symbol) [0x00007FF7473B05AB]
+	(No symbol) [0x00007FF7473E3E72]
+	(No symbol) [0x00007FF7473E32FE]
+	(No symbol) [0x00007FF7473DEC6C]
+	(No symbol) [0x00007FF7473DB30E]
+	(No symbol) [0x00007FF74741A198]
+	(No symbol) [0x00007FF747419CB0]
+	(No symbol) [0x00007FF747411E83]
+	(No symbol) [0x00007FF7473E670A]
+	(No symbol) [0x00007FF7473E7964]
+	GetHandleVerifier [0x00007FF747900AAB+3694587]
+	GetHandleVerifier [0x00007FF74795728E+4048862]
+	GetHandleVerifier [0x00007FF74794F173+4015811]
+	GetHandleVerifier [0x00007FF7476247D6+695590]
+	(No symbol) [0x00007FF747500CE8]
+	(No symbol) [0x00007FF7474FCF34]
+	(No symbol) [0x00007FF7474FD062]
+	(No symbol) [0x00007FF7474ED3A3]
+	BaseThreadInitThunk [0x00007FF8104B5550+16]
+	RtlUserThreadStart [0x00007FF811AA485B+43]
+</status>
+</test>
+<doc>Existe en un documento de texto los pasos manuales
+Esta es mi primera automatizacion</doc>
+<status status="FAIL" starttime="20240912 13:40:54.240" endtime="20240912 13:41:02.920"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="CASO1 SORTABLE">CASO1 SORTABLE</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240912 13:40:58.882" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\Administrador.DESKTOP-QL8M5BG\Documents\Universidad\chromedriver\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (128.0.6613.137); currently, chromedriver 128.0.6613.137 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

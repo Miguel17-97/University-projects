@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230425 12:58:52.413" rpa="false" schemaversion="3">
+<suite id="s1" name="CASO1 BROWSER WINDOWS" source="C:\Users\123\Desktop\Pruebas Universidad\PruebasDemo\Alerts, Frame &amp; Windows\CASO1_BROWSER_WINDOWS.ROBOT">
+<test id="s1-t1" name="G001 Browser windows" line="16">
+<kw name="Set Variable" library="BuiltIn">
+<var>${ruta_carpeta}</var>
+<arg>./Reportes/Alerts/Caso1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230425 12:58:53.225" level="INFO">${ruta_carpeta} = ./Reportes/Alerts/Caso1</msg>
+<status status="PASS" starttime="20230425 12:58:53.224" endtime="20230425 12:58:53.225"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${creada}</var>
+<arg>Create Directory</arg>
+<arg>${ruta_carpeta}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${ruta_carpeta}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20230425 12:58:53.229" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\123\Desktop\Pruebas Universidad\PruebasDemo\Alerts, Frame &amp; Windows\Reportes\Alerts\Caso1"&gt;C:\Users\123\Desktop\Pruebas Universidad\PruebasDemo\Alerts, Frame &amp; Windows\Reportes\Alerts\Caso1&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20230425 12:58:53.227" endtime="20230425 12:58:53.230"/>
+</kw>
+<msg timestamp="20230425 12:58:53.230" level="INFO">${creada} = True</msg>
+<status status="PASS" starttime="20230425 12:58:53.226" endtime="20230425 12:58:53.230"/>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${Navegador}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230425 12:58:53.233" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/interaction'.</msg>
+<status status="PASS" starttime="20230425 12:58:53.232" endtime="20230425 12:59:03.136"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230425 12:59:03.137" endtime="20230425 12:59:03.289"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollBy(0,200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230425 12:59:03.292" level="INFO">Executing JavaScript:
+window.scrollBy(0,200)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230425 12:59:03.289" endtime="20230425 12:59:03.301"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//div[contains(text(),'Alerts, Frame &amp; Windows')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230425 12:59:03.303" endtime="20230425 12:59:03.361"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<arg>${ruta_carpeta}/Caso1</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20230425 12:59:03.502" level="INFO" html="true">&lt;a href="Reportes/Alerts/Caso1/Caso1_1.jpg"&gt;&lt;img src="Reportes/Alerts/Caso1/Caso1_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230425 12:59:03.361" endtime="20230425 12:59:03.503"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=//div[contains(text(),'Alerts, Frame &amp; Windows')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230425 12:59:03.508" level="INFO">Clicking element 'xpath=//div[contains(text(),'Alerts, Frame &amp; Windows')]'.</msg>
+<status status="PASS" starttime="20230425 12:59:03.506" endtime="20230425 12:59:03.689"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//span[text() = 'Browser Windows']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230425 12:59:03.690" endtime="20230425 12:59:03.795"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=//span[text() = 'Browser Windows']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230425 12:59:03.797" level="INFO">Clicking element 'xpath=//span[text() = 'Browser Windows']'.</msg>
+<status status="PASS" starttime="20230425 12:59:03.796" endtime="20230425 12:59:04.029"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<arg>${ruta_carpeta}/Caso1</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20230425 12:59:04.111" level="INFO" html="true">&lt;a href="Reportes/Alerts/Caso1/Caso1_2.jpg"&gt;&lt;img src="Reportes/Alerts/Caso1/Caso1_2.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230425 12:59:04.029" endtime="20230425 12:59:04.111"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>id = tabButton</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230425 12:59:04.114" level="INFO">Clicking element 'id = tabButton'.</msg>
+<status status="PASS" starttime="20230425 12:59:04.113" endtime="20230425 12:59:04.369"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230425 12:59:06.370" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230425 12:59:04.370" endtime="20230425 12:59:06.370"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<arg>${ruta_carpeta}/Caso1</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20230425 12:59:06.445" level="INFO" html="true">&lt;a href="Reportes/Alerts/Caso1/Caso1_3.jpg"&gt;&lt;img src="Reportes/Alerts/Caso1/Caso1_3.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230425 12:59:06.371" endtime="20230425 12:59:06.445"/>
+</kw>
+<kw name="Switch Window" library="Selenium2Library">
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230425 12:59:06.477" endtime="20230425 12:59:06.541"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>id = windowButton</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230425 12:59:06.546" level="INFO">Clicking element 'id = windowButton'.</msg>
+<status status="PASS" starttime="20230425 12:59:06.544" endtime="20230425 12:59:06.861"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230425 12:59:08.863" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230425 12:59:06.863" endtime="20230425 12:59:08.863"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<arg>${ruta_carpeta}/Caso1</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20230425 12:59:08.929" level="INFO" html="true">&lt;a href="Reportes/Alerts/Caso1/Caso1_4.jpg"&gt;&lt;img src="Reportes/Alerts/Caso1/Caso1_4.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230425 12:59:08.863" endtime="20230425 12:59:08.930"/>
+</kw>
+<kw name="Switch Window" library="Selenium2Library">
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230425 12:59:08.930" endtime="20230425 12:59:08.962"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="FAIL" starttime="20230425 12:59:08.964" endtime="20230425 12:59:16.232"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20230425 12:59:16.261" endtime="20230425 12:59:16.262"/>
+</kw>
+<status status="FAIL" starttime="20230425 12:58:53.222" endtime="20230425 12:59:16.277">Execution terminated by signal</status>
+</test>
+<doc>Existe en un documento de texto los pasos manuales
+Esta es mi primera automatizacion</doc>
+<status status="FAIL" starttime="20230425 12:58:52.417" endtime="20230425 12:59:16.309"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="CASO1 BROWSER WINDOWS">CASO1 BROWSER WINDOWS</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

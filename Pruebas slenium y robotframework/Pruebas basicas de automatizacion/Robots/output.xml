@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.11 on win32)" generated="20231026 17:58:02.251" rpa="false" schemaversion="3">
+<suite id="s1" name="Prueba1" source="C:\Users\seang\Desktop\Universidad\Semestres\Septimo semestre\Pruebas\Robots\Prueba1.robot">
+<test id="s1-t1" name="G001 Búsqueda de palabras en google" line="8">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231026 17:58:03.820" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<msg timestamp="20231026 17:58:04.533" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 17:58:04.533" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</msg>
+<status status="FAIL" starttime="20231026 17:58:03.819" endtime="20231026 17:58:04.620"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=/html/body/div[1]/div[2]/div/a/picture/img</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20231026 17:58:04.620" endtime="20231026 17:58:04.620"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea</arg>
+<arg>casos de prueba</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231026 17:58:04.620" endtime="20231026 17:58:04.620"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231026 17:58:04.620" endtime="20231026 17:58:04.620"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[2]/div[2]/div[7]/center/input[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231026 17:58:04.620" endtime="20231026 17:58:04.620"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231026 17:58:04.620" endtime="20231026 17:58:04.620"/>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>casos de prueba - Buscar con Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" starttime="20231026 17:58:04.620" endtime="20231026 17:58:04.620"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>casos de prueba</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20231026 17:58:04.620" endtime="20231026 17:58:04.620"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231026 17:58:04.620" endtime="20231026 17:58:04.620"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20231026 17:58:04.620" endtime="20231026 17:58:04.620"/>
+</kw>
+<status status="FAIL" starttime="20231026 17:58:03.810" endtime="20231026 17:58:04.620">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</status>
+</test>
+<doc>Existe en un documento de texto los pasos manuales
+Esta es mi primera automatizacion</doc>
+<status status="FAIL" starttime="20231026 17:58:02.251" endtime="20231026 17:58:04.620"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Prueba1">Prueba1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

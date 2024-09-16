@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>PRUEBAS_TDD__Test_driven_development_</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+
+  <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+  <PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
+  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+  
+  </ItemGroup>
+
+</Project>

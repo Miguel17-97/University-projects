@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.11 on win32)" generated="20230506 08:07:01.984" rpa="false" schemaversion="3">
+<suite id="s1" name="Bd" source="C:\Users\seang\Desktop\Universidad\Septimo semestre\Pruebas\ejercicioFinal\BD\bd.robot">
+<test id="s1-t1" name="Conectar a base de datos MySQL" line="20">
+<kw name="Connect To Database" library="DatabaseLibrary">
+<arg>pymysql</arg>
+<arg>${DBName}</arg>
+<arg>${DBUser}</arg>
+<arg>${DBPass}</arg>
+<arg>${DBHost}</arg>
+<arg>${DBPort}</arg>
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<msg timestamp="20230506 08:07:02.278" level="INFO">Connecting using : pymysql.connect(db=robot_prueba, user=robot_prueba, passwd=123456abc, host=127.0.0.1, port=3306, charset=None) </msg>
+<status status="PASS" starttime="20230506 08:07:02.257" endtime="20230506 08:07:02.287"/>
+</kw>
+<status status="PASS" starttime="20230506 08:07:02.257" endtime="20230506 08:07:02.287"/>
+</test>
+<test id="s1-t2" name="Crear una tabla" line="23">
+<kw name="Execute Sql String" library="DatabaseLibrary">
+<arg>CREATE TABLE productos(id integer, nombre varchar(20), cantidad integer(100));</arg>
+<doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
+True to run command without an explicit transaction commit or rollback.</doc>
+<msg timestamp="20230506 08:07:02.287" level="INFO">Executing : Execute SQL String  |  CREATE TABLE productos(id integer, nombre varchar(20), cantidad integer(100)); </msg>
+<status status="PASS" starttime="20230506 08:07:02.287" endtime="20230506 08:07:02.308"/>
+</kw>
+<kw name="Execute Sql String" library="DatabaseLibrary">
+<arg>CREATE TABLE clientes(id integer(10), nombre varchar(20), apellido varchar(20), edad integer(2));</arg>
+<doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
+True to run command without an explicit transaction commit or rollback.</doc>
+<msg timestamp="20230506 08:07:02.308" level="INFO">Executing : Execute SQL String  |  CREATE TABLE clientes(id integer(10), nombre varchar(20), apellido varchar(20), edad integer(2)); </msg>
+<status status="PASS" starttime="20230506 08:07:02.308" endtime="20230506 08:07:02.323"/>
+</kw>
+<status status="PASS" starttime="20230506 08:07:02.287" endtime="20230506 08:07:02.323"/>
+</test>
+<test id="s1-t3" name="Insertar productos" line="27">
+<kw name="Execute Sql String" library="DatabaseLibrary">
+<arg>INSERT INTO productos VALUES(01,'Iphone 14',58);</arg>
+<doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
+True to run command without an explicit transaction commit or rollback.</doc>
+<msg timestamp="20230506 08:07:02.323" level="INFO">Executing : Execute SQL String  |  INSERT INTO productos VALUES(01,'Iphone 14',58); </msg>
+<status status="PASS" starttime="20230506 08:07:02.323" endtime="20230506 08:07:02.329"/>
+</kw>
+<kw name="Execute Sql String" library="DatabaseLibrary">
+<arg>INSERT INTO productos VALUES(02,'Ipad Pro',70);</arg>
+<doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
+True to run command without an explicit transaction commit or rollback.</doc>
+<msg timestamp="20230506 08:07:02.329" level="INFO">Executing : Execute SQL String  |  INSERT INTO productos VALUES(02,'Ipad Pro',70); </msg>
+<status status="PASS" starttime="20230506 08:07:02.329" endtime="20230506 08:07:02.332"/>
+</kw>
+<kw name="Execute Sql String" library="DatabaseLibrary">
+<arg>INSERT INTO productos VALUES(03,'Xiaomi Pro',32);</arg>
+<doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
+True to run command without an explicit transaction commit or rollback.</doc>
+<msg timestamp="20230506 08:07:02.332" level="INFO">Executing : Execute SQL String  |  INSERT INTO productos VALUES(03,'Xiaomi Pro',32); </msg>
+<status status="PASS" starttime="20230506 08:07:02.332" endtime="20230506 08:07:02.337"/>
+</kw>
+<kw name="Execute Sql String" library="DatabaseLibrary">
+<arg>INSERT INTO productos VALUES(04,'Audifonos sony',10);</arg>
+<doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
+True to run command without an explicit transaction commit or rollback.</doc>
+<msg timestamp="20230506 08:07:02.337" level="INFO">Executing : Execute SQL String  |  INSERT INTO productos VALUES(04,'Audifonos sony',10); </msg>
+<status status="PASS" starttime="20230506 08:07:02.337" endtime="20230506 08:07:02.337"/>
+</kw>
+<status status="PASS" starttime="20230506 08:07:02.323" endtime="20230506 08:07:02.337"/>
+</test>
+<test id="s1-t4" name="Insertar clientes" line="33">
+<kw name="Execute Sql String" library="DatabaseLibrary">
+<arg>INSERT INTO clientes VALUES(1000888999,'Julian','Naranjo',20);</arg>
+<doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
+True to run command without an explicit transaction commit or rollback.</doc>
+<msg timestamp="20230506 08:07:02.337" level="INFO">Executing : Execute SQL String  |  INSERT INTO clientes VALUES(1000888999,'Julian','Naranjo',20); </msg>
+<status status="PASS" starttime="20230506 08:07:02.337" endtime="20230506 08:07:02.337"/>
+</kw>
+<status status="PASS" starttime="20230506 08:07:02.337" endtime="20230506 08:07:02.337"/>
+</test>
+<test id="s1-t5" name="Modificar datos cliente" line="36">
+<kw name="Execute Sql String" library="DatabaseLibrary">
+<arg>UPDATE `robot_prueba`.`clientes` SET `id`='1234561234' WHERE `nombre`='Julian';</arg>
+<doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
+True to run command without an explicit transaction commit or rollback.</doc>
+<msg timestamp="20230506 08:07:02.348" level="INFO">Executing : Execute SQL String  |  UPDATE `robot_prueba`.`clientes` SET `id`='1234561234' WHERE `nombre`='Julian'; </msg>
+<status status="PASS" starttime="20230506 08:07:02.348" endtime="20230506 08:07:02.348"/>
+</kw>
+<status status="PASS" starttime="20230506 08:07:02.348" endtime="20230506 08:07:02.348"/>
+</test>
+<test id="s1-t6" name="Consultar producto en DB y buscarlo en mercado libre" line="39">
+<kw name="Query" library="DatabaseLibrary">
+<var>${nombre}</var>
+<arg>SELECT nombre FROM productos WHERE id=01;</arg>
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
+input `sansTran` to True to run command without an explicit transaction commit or rollback.
+Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
+<msg timestamp="20230506 08:07:02.348" level="INFO">Executing : Query  |  SELECT nombre FROM productos WHERE id=01; </msg>
+<msg timestamp="20230506 08:07:02.348" level="INFO">${nombre} = (('Iphone 14',),)</msg>
+<status status="PASS" starttime="20230506 08:07:02.348" endtime="20230506 08:07:02.348"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${producto}</var>
+<arg>${nombre[0][0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230506 08:07:02.348" level="INFO">${producto} = Iphone 14</msg>
+<status status="PASS" starttime="20230506 08:07:02.348" endtime="20230506 08:07:02.348"/>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230506 08:07:02.348" level="INFO">Opening browser 'chrome' to base url 'https://www.mercadolibre.com.co/'.</msg>
+<status status="PASS" starttime="20230506 08:07:02.348" endtime="20230506 08:07:05.143"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230506 08:07:05.143" endtime="20230506 08:07:05.323"/>
+</kw>
+<kw name="Query" library="DatabaseLibrary">
+<var>@{list}</var>
+<arg>SELECT nombre FROM productos;</arg>
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
+input `sansTran` to True to run command without an explicit transaction commit or rollback.
+Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
+<msg timestamp="20230506 08:07:05.323" level="INFO">Executing : Query  |  SELECT nombre FROM productos; </msg>
+<msg timestamp="20230506 08:07:05.323" level="INFO">@{list} = [ ('Iphone 14',) | ('Ipad Pro',) | ('Xiaomi Pro',) | ('Audifonos sony',) ]</msg>
+<status status="PASS" starttime="20230506 08:07:05.323" endtime="20230506 08:07:05.326"/>
+</kw>
+<for flavor="IN">
+<var>${productoList}</var>
+<value>@{list}</value>
+<iter>
+<var name="${productoList}">('Iphone 14',)</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>xpath=//*[@id="cb1-edit"]</arg>
+<arg>${productoList}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230506 08:07:05.329" level="INFO">Typing text '('Iphone 14',)' into text field 'xpath=//*[@id="cb1-edit"]'.</msg>
+<status status="PASS" starttime="20230506 08:07:05.326" endtime="20230506 08:07:05.581"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 08:07:07.595" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230506 08:07:05.581" endtime="20230506 08:07:07.595"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=/html/body/header/div/div[2]/form/button/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230506 08:07:07.598" level="INFO">Clicking element 'xpath=/html/body/header/div/div[2]/form/button/div'.</msg>
+<status status="PASS" starttime="20230506 08:07:07.596" endtime="20230506 08:07:08.850"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 08:07:10.861" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230506 08:07:08.850" endtime="20230506 08:07:10.861"/>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>xpath=//*[@id="cb1-edit"]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230506 08:07:10.861" endtime="20230506 08:07:10.937"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 08:07:12.940" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230506 08:07:10.937" endtime="20230506 08:07:12.940"/>
+</kw>
+<status status="PASS" starttime="20230506 08:07:05.326" endtime="20230506 08:07:12.940"/>
+</iter>
+<iter>
+<var name="${productoList}">('Ipad Pro',)</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>xpath=//*[@id="cb1-edit"]</arg>
+<arg>${productoList}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230506 08:07:12.940" level="INFO">Typing text '('Ipad Pro',)' into text field 'xpath=//*[@id="cb1-edit"]'.</msg>
+<status status="PASS" starttime="20230506 08:07:12.940" endtime="20230506 08:07:13.103"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 08:07:15.111" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230506 08:07:13.103" endtime="20230506 08:07:15.111"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=/html/body/header/div/div[2]/form/button/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230506 08:07:15.111" level="INFO">Clicking element 'xpath=/html/body/header/div/div[2]/form/button/div'.</msg>
+<status status="PASS" starttime="20230506 08:07:15.111" endtime="20230506 08:07:16.213"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 08:07:18.220" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230506 08:07:16.214" endtime="20230506 08:07:18.220"/>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>xpath=//*[@id="cb1-edit"]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230506 08:07:18.220" endtime="20230506 08:07:18.296"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 08:07:20.298" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230506 08:07:18.296" endtime="20230506 08:07:20.298"/>
+</kw>
+<status status="PASS" starttime="20230506 08:07:12.940" endtime="20230506 08:07:20.298"/>
+</iter>
+<iter>
+<var name="${productoList}">('Xiaomi Pro',)</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>xpath=//*[@id="cb1-edit"]</arg>
+<arg>${productoList}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230506 08:07:20.298" level="INFO">Typing text '('Xiaomi Pro',)' into text field 'xpath=//*[@id="cb1-edit"]'.</msg>
+<status status="PASS" starttime="20230506 08:07:20.298" endtime="20230506 08:07:20.458"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 08:07:22.459" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230506 08:07:20.458" endtime="20230506 08:07:22.459"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=/html/body/header/div/div[2]/form/button/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230506 08:07:22.460" level="INFO">Clicking element 'xpath=/html/body/header/div/div[2]/form/button/div'.</msg>
+<status status="PASS" starttime="20230506 08:07:22.459" endtime="20230506 08:07:23.487"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 08:07:25.490" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230506 08:07:23.487" endtime="20230506 08:07:25.490"/>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>xpath=//*[@id="cb1-edit"]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230506 08:07:25.490" endtime="20230506 08:07:25.560"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 08:07:27.563" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230506 08:07:25.560" endtime="20230506 08:07:27.563"/>
+</kw>
+<status status="PASS" starttime="20230506 08:07:20.298" endtime="20230506 08:07:27.563"/>
+</iter>
+<iter>
+<var name="${productoList}">('Audifonos sony',)</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>xpath=//*[@id="cb1-edit"]</arg>
+<arg>${productoList}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230506 08:07:27.563" level="INFO">Typing text '('Audifonos sony',)' into text field 'xpath=//*[@id="cb1-edit"]'.</msg>
+<status status="PASS" starttime="20230506 08:07:27.563" endtime="20230506 08:07:27.718"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 08:07:29.728" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230506 08:07:27.718" endtime="20230506 08:07:29.728"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=/html/body/header/div/div[2]/form/button/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230506 08:07:29.728" level="INFO">Clicking element 'xpath=/html/body/header/div/div[2]/form/button/div'.</msg>
+<status status="PASS" starttime="20230506 08:07:29.728" endtime="20230506 08:07:31.079"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 08:07:33.090" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230506 08:07:31.079" endtime="20230506 08:07:33.090"/>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>xpath=//*[@id="cb1-edit"]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230506 08:07:33.090" endtime="20230506 08:07:33.178"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 08:07:35.181" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230506 08:07:33.178" endtime="20230506 08:07:35.181"/>
+</kw>
+<status status="PASS" starttime="20230506 08:07:27.563" endtime="20230506 08:07:35.181"/>
+</iter>
+<status status="PASS" starttime="20230506 08:07:05.326" endtime="20230506 08:07:35.181"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 08:07:40.187" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230506 08:07:35.182" endtime="20230506 08:07:40.187"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230506 08:07:40.188" endtime="20230506 08:07:42.409"/>
+</kw>
+<status status="PASS" starttime="20230506 08:07:02.348" endtime="20230506 08:07:42.409"/>
+</test>
+<kw name="Disconnect From Database" library="DatabaseLibrary" type="TEARDOWN">
+<doc>Disconnects from the database.</doc>
+<msg timestamp="20230506 08:07:42.413" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20230506 08:07:42.413" endtime="20230506 08:07:42.413"/>
+</kw>
+<status status="PASS" starttime="20230506 08:07:01.984" endtime="20230506 08:07:42.413"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Bd">Bd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
